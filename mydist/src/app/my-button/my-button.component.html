@@ -1,0 +1,5 @@
+<style></style>
+<button [ngClass]="{ isLiked: displayBoolean }" (click)="toggleLiked()">
+  Click to like image
+</button>
+<span id="image">Image is liked == {{ displayBoolean }}</span>
