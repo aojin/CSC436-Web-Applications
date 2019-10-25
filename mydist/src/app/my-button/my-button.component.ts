@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 import { MyServiceService } from "../my-service.service";
 
 @Component({
@@ -7,17 +7,17 @@ import { MyServiceService } from "../my-service.service";
   styleUrls: ["./my-button.component.css"],
   providers: [MyServiceService]
 })
-export class MyButtonComponent implements OnInit {
+export class MyButtonComponent {
   isLiked;
   constructor(private myService: MyServiceService) {
     this.isLiked = this.myService.isLiked;
   }
 
-  public get displayBoolean(): string {
+  public get displayBoolean(): Boolean {
     return this.myService.isLiked;
   }
 
   toggleLiked() {
-    this.myService.likeImage();
+    this.myService.likeImage;
   }
 }
